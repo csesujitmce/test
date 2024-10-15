@@ -4,6 +4,9 @@ from myapp2.models import Book
 
 class BookListView(ListView):
     model = Book
+    # Default template file name is modelname_list.html
+    # default context name is modelname_list
+    
     
 
 
