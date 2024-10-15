@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "myapp2/base.html" %}
+{% load static %}
+
+{% block  child_block%}
+    <div class="container">
+        <h1> Books List is Below </h1><hr>
+        <ol>
+            {% for book in book_list%}        
+                <li><a href = "/app2/{{book.id}}">{{book.title}}</a></li>
+            {% endfor %}
+        </ol>
+        
+    </div>
+{% endblock  %}

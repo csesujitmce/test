@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "myapp2/base.html" %}
+{% load static %}
+
+{% block  child_block%}
+    <div class="container container-custom" align = 'center'>
+        <h1>{{book.title}} Information </h1> <hr>
+        <ul class="list-group">
+            <li class="list-group-item">Title: <strong>{{book.title}}</strong></li>
+            <li class="list-group-item">Author: <strong>{{book.author}}</strong></li>
+            <li class="list-group-item">Pages: <strong>{{book.pages}}</strong></li>
+            <li class="list-group-item">Price: <strong>{{book.price}}</strong></li>
+        </ul>
+        <br>
+        <a href = "{% url 'home' %}" class = "btn btn-success" > Back </a>
+    </div>
+{% endblock  %}

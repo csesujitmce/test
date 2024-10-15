@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "myapp/base.html" %}
+{% load static %}
+
+{% block  child_block%}
+    <div class="conatiner">
+        {% if status %}
+        <h1>
+            Thank you to send information {{testmsg}}
+        </h1>
+        {% else %}
+        <h2>
+            Books list id display below
+        </h2>
+        {% if books %}
+        
+        <div class="table-responsive" >
+            <table
+                class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Books Name</th>
+                        <th scope="col">Author Name</th>
+                        <th scope="col">Page Number 3</th>
+                        <th scope="col">Price 3</th>
+                    </tr>
+                </thead>
+                {% for book in books%}
+                <tbody>
+                    <tr class="">
+                        <td scope="row">{{book.title}}</td>
+                        <td>{{book.author}}</td>
+                        <td>{{book.pages}}</td>
+                        <td>{{book.price}}</td>
+                    </tr>                   
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+        
+        {% endif %}
+        {%endif%}
+        <hr>
+    </div>
+{% endblock  %}
